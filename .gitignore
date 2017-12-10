@@ -1,0 +1,9 @@
+
+.env
+.idea
+.sistema_de_agendamento_venv
+*pyc
+*.sqlite3
+__pycache__
+.ipynb_checkpoints
+staticfiles
