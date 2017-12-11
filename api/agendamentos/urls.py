@@ -1,12 +1,11 @@
 from django.urls import path
-
 from api.agendamentos import views
 
-agendamento_lista = views.AgendamentosViewSet.as_view({
+get_and_post = views.AgendamentosViewSet.as_view({
     'get': 'list',
     'post': 'create'
 })
-agendamento_detail = views.AgendamentosViewSet.as_view({
+put_delete_retrieve = views.AgendamentosViewSet.as_view({
     'get': 'retrieve',
     'put': 'update',
     'delete': 'destroy'
@@ -14,7 +13,13 @@ agendamento_detail = views.AgendamentosViewSet.as_view({
 
 app_name = 'agenda'
 
+
+
+
 urlpatterns = [
-    path('', agendamento_lista, name='lista'),
-    path('<int:pk>/', agendamento_detail, name='detail'),
+    path('', get_and_post, name='listagem'),
+    path('agendar/', get_and_post, name='create'),
+    path('remarcar/<int:pk>/', put_delete_retrieve, name='atualizar'),
+    path('cancelar/<int:pk>/', put_delete_retrieve, name='deletar'),
+    path('detalhe-agenda/<int:pk>/', put_delete_retrieve, name='detalhe'),
 ]

@@ -6,8 +6,8 @@ from api.agendamentos.views import AgendamentosViewSet
 
 class ResolveNomeGetAndPostTest(TestCase):
     def setUp(self):
-        self.resolveLista = self.resolver_nomes('agenda:lista')
-        self.resolveDetail = self.resolver_nomes('agenda:detail', pk=1)
+        self.resolveLista = self.resolver_nomes('agenda:listagem')
+        self.resolveDetail = self.resolver_nomes('agenda:detalhe', pk=1)
 
 
     def test_resolve_url_lista(self):

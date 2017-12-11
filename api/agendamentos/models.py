@@ -2,15 +2,15 @@
 from django.db import models
 
 # Create your models here.
-from django.utils.timezone import datetime
+from _datetime import datetime
 
 
 class Agendamento(models.Model):
-    data = models.DateField('Data', blank=True, default=datetime.now)
+    data = models.DateField('Data', default=datetime.now)
     hora_inicio = models.TimeField('Inicio', default=datetime.now().hour)
     hora_final = models.TimeField('Fim', default=datetime.now().hour)
-    nome_paciente = models.CharField('Paciente', max_length=150)
-    procedimento = models.CharField('Procedimento', max_length=250)
+    nome_paciente = models.CharField('Paciente', blank=True, max_length=150)
+    procedimento = models.CharField('Procedimento',blank=True, max_length=250)
 
     class Meta:
         verbose_name = "Agendamento"
