@@ -12,6 +12,5 @@ class AgendamentosViewSet(viewsets.ModelViewSet):
     ações de "atualização" e "destruir".
 
     """
-
     queryset = Agendamento.objects.all()
     serializer_class = AgendamentoSerializers

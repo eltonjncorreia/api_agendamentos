@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path, include, re_path
 from rest_framework_swagger.views import get_swagger_view
 
 from api.agendamentos import views
@@ -24,9 +24,9 @@ app_name = 'agenda'
 
 urlpatterns = [
     path('', get_list, name='listagem'),
-    path('agendar/', post_create, name='create'),
-    path('remarcar/<int:pk>/', put_update_retrieve, name='atualizar'),
-    path('cancelar/<int:pk>/', put_update_retrieve, name='deletar'),
-    path('detalhes/<int:pk>/', put_update_retrieve, name='detalhes'),
+    re_path(r'/agendar/', post_create, name='create'),
+    re_path(r'/remarcar/(?P<pk>\d+)/', put_update_retrieve, name='atualizar'),
+    re_path(r'/cancelar/(?P<pk>\d+)/', put_update_retrieve, name='deletar'),
+    re_path(r'/detalhes/(?P<pk>\d+)/', put_update_retrieve, name='detalhes'),
 
 ]
