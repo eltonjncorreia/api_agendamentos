@@ -9,8 +9,7 @@ Sistema de agendamentos.
 2.  Crie um virtualenv com Python 3.6.3
 3.  Ative o virtualenv.
 4.  Instale as dependências.
-5.  Configure a instância com o .env
-6.  Execute os testes.
+5.  Execute os testes.
 
 ``` console
 git clone https://github.com/eltonjncorreia/api_agendamentos.git sdaAPI
@@ -59,11 +58,3 @@ GET     http://localhost:8000/agendamentos/detalhes/id/
 
 ```
 
-# Como acessar a API REST
-
-1. Veja a documentação na url
-
-```console
-http://
-
-```
