@@ -23,7 +23,7 @@ put_update_retrieve = views.AgendamentosViewSet.as_view({
 app_name = 'agenda'
 
 urlpatterns = [
-    path('', get_list, name='listagem'),
+    re_path('', get_list, name='listagem'),
     re_path(r'/agendar/', post_create, name='create'),
     re_path(r'/remarcar/(?P<pk>\d+)/', put_update_retrieve, name='atualizar'),
     re_path(r'/cancelar/(?P<pk>\d+)/', put_update_retrieve, name='deletar'),

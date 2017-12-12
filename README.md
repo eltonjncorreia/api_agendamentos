@@ -38,8 +38,8 @@ python manage.py runserver
 
 # Como acessar a documentação da API
 
-1. Realize o login com o usuario recem criado
-2. Com o servidor local rodando acesse a url da documentação
+1. Realize o login com o usuario recem criado.
+2. Com o servidor local rodando acesse a url da documentação.
 
 
 ```console

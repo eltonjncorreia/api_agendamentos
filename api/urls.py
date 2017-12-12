@@ -13,6 +13,7 @@ schema_view = get_swagger_view(title='API Agendamento')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', schema_view),
     path('agendamentos', include('api.agendamentos.urls', namespace='agenda')),
     path('docs/', schema_view)
 
