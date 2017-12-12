@@ -24,7 +24,7 @@ app_name = 'agenda'
 
 urlpatterns = [
     path('', get_list, name='listagem'),
-    path('agendar', post_create, name='create'),
+    path('agendar/', post_create, name='create'),
     path('remarcar/<int:pk>/', put_update_retrieve, name='atualizar'),
     path('cancelar/<int:pk>/', put_update_retrieve, name='deletar'),
     path('detalhes/<int:pk>/', put_update_retrieve, name='detalhes'),

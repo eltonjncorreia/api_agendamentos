@@ -2,7 +2,6 @@
 
 Sistema de agendamentos.
 
-[![Build Status](https://travis-ci.org/eltonjncorreia/eventex.svg?branch=master)](https://travis-ci.org/eltonjncorreia/eventex)
 
 ## Como desenvolver?
 
@@ -14,26 +13,57 @@ Sistema de agendamentos.
 6.  Execute os testes.
 
 ``` console
-git clone git@github.com:eltonjncorreia/api_agendamentos.git sdaAPI
+git clone https://github.com/eltonjncorreia/api_agendamentos.git sdaAPI
 cd sdaAPI
 python -m venv .sdaAPI
 source .sdaAPI/bin/activate
 pip install -r requirements.txt
 python manage.py test
 
-
 ```
-## Como rodar a API?
 
-1. Execute o comando python manage.py para migraçoes
+## Como rodar a API Local?
+
+1. Execute as migraçoes
 2. Crie uma senha de usuarios, somente super usuarios teram acesso a POST, PUT, DELETE.
 3. Rode o servidor local
 
 
 ``` console
-python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
+
 ```
 
+
+# Como acessar a documentação da API
+
+1. Realize o login com o usuario recem criado
+2. Com o servidor local rodando acesse a url da documentação
+
+
+```console
+http://localhost:8000/admin/
+http://localhost:8000/docs/
+
+```
+
+# Acessar localmente a API atraves das seguintes urls
+```console
+GET     http://localhost:8000/agendamentos/
+POST    http://localhost:8000/agendamentos/agendar/
+PUT     http://localhost:8000/agendamentos/remarcar/id/
+DELETE  http://localhost:8000/agendamentos/cancelar/id/
+GET     http://localhost:8000/agendamentos/detalhes/id/
+
+```
+
+# Como acessar a API REST
+
+1. Veja a documentação na url
+
+```console
+http://
+
+```

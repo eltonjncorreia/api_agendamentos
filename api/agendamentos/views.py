@@ -7,9 +7,11 @@ from api.agendamentos.serializers import AgendamentoSerializers
 
 class AgendamentosViewSet(viewsets.ModelViewSet):
     """
+
     Esta view fornece automaticamente `list`,` create`, `retrieve`,
     ações de "atualização" e "destruir".
 
     """
+
     queryset = Agendamento.objects.all()
     serializer_class = AgendamentoSerializers
