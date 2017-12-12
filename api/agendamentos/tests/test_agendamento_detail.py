@@ -13,7 +13,7 @@ class AgendamentosDetailTest(TestCase):
             hora_final='12:40:20',
 
         )
-        self.response = self.client.get(r('agenda:detalhe', self.obj.pk))
+        self.response = self.client.get(r('agenda:detalhes', self.obj.pk))
 
     def test_get_detail_id(self):
         self.assertEqual(200, self.response.status_code)
@@ -21,5 +21,5 @@ class AgendamentosDetailTest(TestCase):
 
 class AgendamentoDetailNotFound(TestCase):
     def test_not_found(self):
-        self.response = self.client.get(r('agenda:detalhe', 0))
+        self.response = self.client.get(r('agenda:detalhes', 0))
         self.assertEqual(404, self.response.status_code)

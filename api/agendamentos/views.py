@@ -1,4 +1,5 @@
-from rest_framework import viewsets, permissions
+from rest_framework import viewsets
+
 from api.agendamentos.models import Agendamento
 from api.agendamentos.serializers import AgendamentoSerializers
 
@@ -12,4 +13,3 @@ class AgendamentosViewSet(viewsets.ModelViewSet):
     """
     queryset = Agendamento.objects.all()
     serializer_class = AgendamentoSerializers
-
