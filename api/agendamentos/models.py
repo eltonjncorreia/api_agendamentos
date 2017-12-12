@@ -6,7 +6,7 @@ from _datetime import datetime
 
 
 class Agendamento(models.Model):
-    data = models.DateField('Data', default=datetime.now)
+    data = models.DateField('Data', default=datetime.now().date)
     hora_inicio = models.TimeField('Inicio', default=datetime.now().hour)
     hora_final = models.TimeField('Fim', default=datetime.now().hour)
     nome_paciente = models.CharField('Paciente', blank=True, max_length=150)
