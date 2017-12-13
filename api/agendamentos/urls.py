@@ -6,6 +6,7 @@ from api.agendamentos import views
 
 get_list = views.AgendamentosViewSet.as_view({
     'get': 'list',
+
 })
 
 post_create = views.AgendamentosViewSet.as_view({
@@ -13,20 +14,27 @@ post_create = views.AgendamentosViewSet.as_view({
 })
 
 
-put_update_retrieve = views.AgendamentosViewSet.as_view({
+put_update = views.AgendamentosViewSet.as_view({
     'put': 'update',
-    'get': 'retrieve',
-    'delete': 'destroy'
+
 })
 
+
+get_retrieve = views.AgendamentosViewSet.as_view({
+    'get': 'retrieve',
+})
+
+detete_detroy =views.AgendamentosViewSet.as_view({
+    'delete': 'destroy'
+})
 
 app_name = 'agenda'
 
 urlpatterns = [
-    re_path('', get_list, name='listagem'),
-    re_path(r'/agendar/', post_create, name='create'),
-    re_path(r'/remarcar/(?P<pk>\d+)/', put_update_retrieve, name='atualizar'),
-    re_path(r'/cancelar/(?P<pk>\d+)/', put_update_retrieve, name='deletar'),
-    re_path(r'/detalhes/(?P<pk>\d+)/', put_update_retrieve, name='detalhes'),
+    path('', get_list, name='listagem'),
+    re_path(r'agendar/', post_create, name='create'),
+    re_path(r'remarcar/(?P<pk>\d+)/', put_update, name='atualizar'),
+    re_path(r'cancelar/(?P<pk>\d+)/', detete_detroy, name='deletar'),
+    re_path(r'detalhes/(?P<pk>\d+)/', get_retrieve, name='detalhes'),
 
 ]
