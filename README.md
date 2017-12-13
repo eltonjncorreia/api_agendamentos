@@ -40,11 +40,14 @@ python manage.py runserver
 
 1. Realize o login com o usuario recem criado.
 2. Com o servidor local rodando acesse a url da documentação.
+3. Outra forma de acessar a documentação.
 
 
 ```console
 http://localhost:8000/admin/
 http://localhost:8000/docs/
+http://localhost:8000/
+
 
 ```
 
