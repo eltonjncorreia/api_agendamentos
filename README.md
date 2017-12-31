@@ -9,7 +9,8 @@ Sistema de agendamentos.
 2.  Crie um virtualenv com Python 3.6.3
 3.  Ative o virtualenv.
 4.  Instale as dependências.
-5.  Execute os testes.
+5.  Configure a instância com o .env
+6.  Execute os testes.
 
 ``` console
 git clone https://github.com/eltonjncorreia/api_agendamentos.git sdaAPI
@@ -17,6 +18,7 @@ cd sdaAPI
 python -m venv .sdaAPI
 source .sdaAPI/bin/activate
 pip install -r requirements.txt
+cp contrib/env-local .env
 python manage.py test
 
 ```
