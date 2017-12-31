@@ -53,11 +53,11 @@ http://localhost:8000/
 
 # Acessar localmente a API atraves das seguintes urls
 ```console
-GET     http://localhost:8000/agendamentos/
-POST    http://localhost:8000/agendamentos/agendar/
-PUT     http://localhost:8000/agendamentos/remarcar/id/
-DELETE  http://localhost:8000/agendamentos/cancelar/id/
-GET     http://localhost:8000/agendamentos/detalhes/id/
+Listar    GET     http://localhost:8000/agendamentos/
+Criar     POST    http://localhost:8000/agendamentos/agendar/
+Atualizar PUT     http://localhost:8000/agendamentos/remarcar/id/
+Deletar   DELETE  http://localhost:8000/agendamentos/cancelar/id/
+Recuperar GET     http://localhost:8000/agendamentos/detalhes/id/
 
 ```
 
